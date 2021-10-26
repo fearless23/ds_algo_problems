@@ -6,26 +6,25 @@ const split = (arr = []) => {
   const e = arr.length - 1;
 
   const run = (y, s) => {
-    if (s > e) return Math.abs(y)
+    if (s > e) return Math.abs(y);
     // go left
-    const d1 = run(y + arr[s], s + 1)
+    const d1 = run(y + arr[s], s + 1);
     // go right
-    const d2 = run(y - arr[s], s + 1)
+    const d2 = run(y - arr[s], s + 1);
 
-    return Math.min(d1, d2)
-  }
+    return Math.min(d1, d2);
+  };
 
-  return run(0, 0)
+  return run(0, 0);
 
-//  l - r = Y
-//  (l + x) - r = Y + x
-//  l - (r + x) = Y - x
+  //  l - r = Y
+  //  (l + x) - r = Y + x
+  //  l - (r + x) = Y - x
+};
 
-}
-
-const nums = [1, 2, 3, 4, 5]
+const nums = [1, 2, 3, 4, 5];
 const result = split(nums);
-console.log(`result --> `, result)
+console.log('result --> ', result);
 
 // [1,2,3,4,5]
 

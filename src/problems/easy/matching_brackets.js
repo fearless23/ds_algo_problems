@@ -1,8 +1,8 @@
-import { stack_with_sll } from './../../ds/3.Stack/stack_with_sll';
+// import { stack_with_sll } from './../../ds/3.Stack/stack_with_sll';
 
 export const matching_brackets = (logger, payload) => {
   try {
-    const s = stack_with_sll();
+    const s = [];
     const str = payload.str;
     for (const char of str) {
       if (OPEN.some(i => i === char)) {

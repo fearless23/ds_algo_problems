@@ -1,4 +1,4 @@
-import { DATA_STRUCTURES } from './src/play';
+import { problems } from './src';
 import pino from 'pino';
 
 const base_logger = pino({
@@ -17,11 +17,11 @@ const base_logger = pino({
 
 export const handler = async (event = {}) => {
   const output = { event };
-  const { category, num } = event;
+  const { category, key } = event;
   const logger = base_logger.child({});
 
   try {
-    const func = DATA_STRUCTURES[category][num];
+    const func = problems[category][key];
     if (!func) throw new Error('unknown event.category or event.num key');
     output.result = func(console, event.payload);
   } catch (error) {

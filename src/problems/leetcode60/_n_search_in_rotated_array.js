@@ -29,8 +29,7 @@ const search = (nums, target) => {
 const two_arrays = (arr = [], t = 0) => {
   const { l, r } = split(arr);
 
-  if(l.length <= 1) //
-  
+  // if(l.length <= 1) //
 };
 
 // const nums = [4, 5, 6, 7, 0, 1, 2];
