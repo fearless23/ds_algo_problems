@@ -59,9 +59,14 @@ const get_days = (capacity, weights) => {
   return days;
 };
 
-// const weights = [180, 373, 75, 82, 497, 23, 303, 299, 53, 426, 152, 314, 206, 433, 283, 370, 179, 254, 265, 431, 453, 17, 189, 224] // 631
-// const days = 12
-const weights = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]; // 15
-const days = 5;
-const result = shipWithinDays(weights, days);
-console.log('result --> ', result);
+const run = (logger = console) => {
+  // const weights = [180, 373, 75, 82, 497, 23, 303, 299, 53, 426, 152, 314, 206, 433, 283, 370, 179, 254, 265, 431, 453, 17, 189, 224] // 631
+  // const days = 12
+  const weights = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]; // 15
+  const days = 5;
+  const result = shipWithinDays(weights, days);
+  logger.info({ result }, 'result');
+};
+
+// run();
+export default run;

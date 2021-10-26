@@ -37,8 +37,10 @@ const add_to_combo = (candidates, target) => ({ combo, sum, last }) => {
   return { final, combos };
 };
 
-// const result = combinationSum([2, 3, 5], 8)
-const result = combinationSum([2], 1);
-console.log(result);
+const run = () => {
+  // const result = combinationSum([2, 3, 5], 8)
+  const result = combinationSum([2], 1);
+  console.log(result);
+};
 
-export default combinationSum;
+export default run;
